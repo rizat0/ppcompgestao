@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PPCOMP - Sistema de Gestão</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Menu lateral -->
+    <aside id="sidebar" class="sidebar">
+        <ul>
+            <li><a href="#" class="active" data-target="pagina-inicial">PÁGINA INICIAL</a></li>
+            <li><a href="#" data-target="processos">PROCESSOS</a></li>
+            <li><a href="#" data-target="relatorios">RELATÓRIOS</a></li>
+            <li><a href="#" data-target="estatisticas">ESTATÍSTICAS</a></li>
+        </ul>
+    </aside>
+
+    <!-- Barra superior -->
+    <header class="topbar">
+        <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+        <div class="topbar-buttons">
+            <button class="dropdown">Tutorial ▼</button>
+            <button class="dropdown">Processos ▼</button>
+        </div>
+        <div class="profile-circle"></div>
+    </header>
+
+    <!-- Conteúdo principal que se move junto com o menu -->
+    <div id="main-content">
+
+        <!-- Página Inicial (Landing + Dashboard) -->
+        <section class="section active" data-section="pagina-inicial">
+
+            <!-- Landing -->
+            <div class="landing">
+                <div class="landing-content">
+                    <h1>COMO FUNCIONA O <br> MONITORAMENTO DOS <br> PROCESSOS NO CAMPUS?</h1>
+                    <p>Nós construímos este sistema para tornar mais fácil essa gestão.</p>
+                    <a href="#dashboard" class="cta-button">Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- Dashboard -->
+            <div class="dashboard">
+                <div class="dashboard-container">
+                    <h2>DASHBOARD</h2>
+
+                    <div class="filters">
+                        <button class="filter active">Estatísticas</button>
+                        <button class="filter">Processos</button>
+                        <button class="filter">Relatórios</button>
+                    </div>
+
+                    <div class="dashboard-layout">
+                        <div class="card-column">
+                            <div class="info-card">
+                                <div class="card-title">DEFESAS ATIVAS</div>
+                                <div class="card-number">4</div>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="card-title">DEFESAS PENDENTES</div>
+                                <div class="card-number">4</div>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="card-title">DEFESAS FINALIZADAS</div>
+                                <div class="card-number">4</div>
+                            </div>
+                        </div>
+
+                        <div class="chart-box">
+                            <canvas id="graficoDefesas"></canvas>
+                        </div>
+
+                        <div class="reports-box">
+                            <div class="reports-title">Relatórios</div>
+                            <div class="reports-item">Último relatórios gerado: 05/08</div>
+                            <div class="reports-item">Novos dados disponíveis</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Processos -->
+        <section class="section management-section" data-section="processos">
+            <h2>PROCESSOS</h2>
+            <div class="management-cards">
+                <div class="management-card">DEFESAS</div>
+                <div class="management-card">PROCESSOS SELETIVOS</div>
+                <div class="management-card">OUTRO PROCESSO</div>
+            </div>
+        </section>
+
+
+        <!-- Relatórios -->
+        <section class="section management-section" data-section="relatorios">
+            <h2>RELATÓRIOS</h2>
+            <div class="management-cards">
+                <div class="management-card">QUADRIENAL</div>
+                <div class="management-card">PRODUÇÕES ACADÊMICAS</div>
+                <div class="management-card">DEFESAS DE ALUNOS</div>
+            </div>
+        </section>
+
+        <!-- Estatísticas -->
+        <section class="section" data-section="estatisticas">
+            <h2>ESTATÍSTICAS</h2>
+            <p>Conteúdo da seção Estatísticas...</p>
+        </section>
+    </div>
+
+    <!-- Chama o código javascript -->
+    <script src="grafico.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
