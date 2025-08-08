@@ -123,15 +123,11 @@ body {
     color: white;
 }
 
-/* Painel verde arredondado */
-.dashboard-container {
+/* Layout interno com 3 colunas */
+.dashboard-painel {
     background-color: #4b896f;
     border-radius: 10px;
     padding: 30px;
-}
-
-/* Layout interno com 3 colunas */
-.dashboard-layout {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     gap: 20px;
